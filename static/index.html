@@ -1,0 +1,187 @@
+<!DOCTYPE HTML >
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Online shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body >
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }    /* The Close Button (x) */
+        .close {
+            float: right;
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff0000;
+            cursor: pointer;
+        }
+
+        .menu{
+            margin-top : 10%;
+            margin-left: 30%;
+            margin-right: auto;
+            width : 35%;
+            height: 50%;
+        }
+
+        h2 {
+            font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+            font-family: -apple-system;
+            color: #fff;
+            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .button {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #5f07ac;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        a{
+            text-decoration: none;
+            font-style: normal;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #ab86fc;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            font-size: 30px;
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 10px;
+            top: 10px;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal.submit{width : 100%;}
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #0e0e0e;
+            padding: 10px;
+            margin: 15% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888888;
+            width: 40%; /* Could be more or less, depending on screen size */
+            height :35%;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class = "menu">
+    <h2>Welcome</h2>
+    <button class="button" style="vertical-align:middle" onclick=" document.getElementById('id01').style.display='block', document.getElementById('admin').style.display='block', document.getElementById('emp').style.display='none'"><span>Administrator</span></button>
+    <button class="button" style="vertical-align:middle"><span><a href="client.html">Client</a></span></button>
+    <button class="button" style="vertical-align:middle"  onclick=" document.getElementById('id01').style.display='block', document.getElementById('admin').style.display='none', document.getElementById('emp').style.display='block'"><span>Employee </span></button>
+</div>
+
+<div id="id01" class="modal" style="display: none">
+    <form  method = "get" class="modal-content animate"  id="logForm" >
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <button id = "admin" style="width:100%;" onclick=" document.getElementById('id01').style.display='none'"><a href = "admin.html">LOG IN</a></button>
+            <button id = "emp" style="width:100%;" onclick=" document.getElementById('id01').style.display='none'"><a href = "emp.html">LOG IN</a></button>
+    </form>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .menu1{ background-color: black;
+            margin-top : 5%;
+            margin-left: 20%;
+            margin-right: auto;
+            width : 54%;
+            height: 45%;
+            padding: 0 0 25px 45px;
+            border: 1px solid white;
+        }
+
+        h2 {
+            font: 400 100px/0.8 'Great Vibes', Helvetica, sans-serif;
+            font-family: -apple-system;
+            color: #fff;
+            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .button {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #5f07ac;
+            border: none;
+            padding: 20px;
+            width: 40%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-right: 1px;
+        }
+
+        .button1 {
+            display: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            border-radius: 4px;
+            background-color: #5f07ac;
+            border: none;
+            padding: 20px;
+            width: 25%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin-left:3px;
+
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        div.ad.button:hover div.ad.button1{
+            display: block;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        a{
+            text-decoration: none;
+            font-style: normal;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .modal {
+            font-size: 30px;
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 10px;
+            top: 10px;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal.submit{width : 100%;}
+
+        /* Modal Content/Box */
+        .modal-content {
+            font-size: 20px;
+            color: white;
+            background-color: #0e0e0e;
+            padding: 15px 15px 15px 15px;
+            margin: 15% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888888;
+            width: 40%; /* Could be more or less, depending on screen size */
+            height :auto;
+        }
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff0000;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)}
+            to {-webkit-transform: scale(1)}
+        }
+
+        @keyframes animatezoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .psw2 {
+            display: block;
+            float: right;
+        }
+
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #7541e7;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+<div class = menu1>
+    <h2>Select an operation</h2>
+    <div class="ad"><button onmouseenter="document.getElementById('id1').style.display='inline-block'; document.getElementById('id2').style.display='inline-block'" onclick="document.getElementById('id1').style.display='none';  document.getElementById('id2').style.display='none'" class="button" style="vertical-align:middle"><span>ADD </span></button>
+        <button class = "button1" id = "id1" onclick="this.style.display='none';  document.getElementById('id2').style.display='none'; document.getElementById('adEmp').style.display='block'" >Employee</button>
+        <button class="button1" id = "id2" onclick="this.style.display='none';  document.getElementById('id1').style.display='none';  document.getElementById('adProd').style.display='block'" > Product </button></div>
+    <div>
+<button class="button" style="vertical-align:middle"  onmouseenter="document.getElementById('id01').style.display='inline-block'; document.getElementById('id02').style.display='inline-block'" onclick="document.getElementById('id01').style.display='none';  document.getElementById('id02').style.display='none'" ><span>DELETE</span></button>
+    <button class = "button1" id = "id01" onclick="this.style.display='none';  document.getElementById('id02').style.display='none';  document.getElementById('delEmp').style.display='block'" >Employee</button>
+    <button class="button1" id = "id02" onclick="this.style.display='none';  document.getElementById('id01').style.display='none';  document.getElementById('delProd').style.display='block'" > Product </button></div>
+    <button class="button" style="vertical-align:middle"><span>MODIFY PRODUCT </span></button>
+
+
+
+
+    <div id="adEmp" class="modal" style="display: none">
+        <form  method = "get" class="modal-content animate" id="logForm" >
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('adEmp').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <button type="submit" formaction="/addEmp" style="width:100%;" onclick=" document.getElementById('adEmp').style.display='none'">Create account</button>
+        </form>
+    </div>
+
+    <div id="delEmp" class="modal" style="display: none">
+        <form  method = "get" class="modal-content animate"  >
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('delEmp').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <label for="idd"><b>Employee ID</b></label>
+            <input type="text" placeholder="Enter ID" name="idd" id="idd" required>
+            <button type="submit" formaction="/delEmp" style="width:100%;" onclick=" document.getElementById('delEmp').style.display='none'">Delete</button>
+        </form>
+    </div>
+
+
+    <div id="adProd" class="modal" style="display: none">
+        <form  method = "get" class="modal-content animate" >
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('adProd').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Product Name" name="name" id="name" required>
+            <label for="rating"><b>Rating</b></label>
+            <input type="text" placeholder="Enter Rating" name="rating" id="rating" required>
+            <label for="price"><b>Price</b></label>
+            <input type="text" placeholder="Enter Price" name="price" id="price" required>
+            <button type="submit" formaction="/addProd" style="width:100%;" onclick=" document.getElementById('adProd').style.display='none'">ADD PRODUCT</button>
+        </form>
+    </div>
+
+    <div id="delProd" class="modal" style="display: none">
+        <form  method = "get" class="modal-content animate"  >
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('delProd').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <label for="idd1"><b>Product ID</b></label>
+            <input type="text" placeholder="Enter ID" name="idd1" id="idd1" required>
+            <button type="submit" formaction="/delProd" style="width:100%;" onclick=" document.getElementById('delProd').style.display='none'">Delete</button>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</div>
+</body>
+</html>

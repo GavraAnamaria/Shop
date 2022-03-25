@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+</head>
+<body>
+<!DOCTYPE HTML >
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body >
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .txt{
+            font-size: 20px;
+            margin-bottom: 12px;
+            width : 50%;
+            height: auto;
+            float: left;
+        }
+
+
+
+        h2 {
+            font: 400 70px/0.8 'Great Vibes', Helvetica, sans-serif;
+            font-family: -apple-system;
+            color: #fff;
+            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .button {
+            margin-top: 2%;
+            margin-right: 2%;
+            float: right;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #5f07ac;
+            border: none;
+            padding: 20px;
+            width:20%;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        a{
+            text-decoration: none;
+            font-style: normal;
+            color: #FFFFFF;
+            font-size: 25px;
+        }
+        .menu{
+        }
+        .modal {
+            height: 20%;
+            margin-left: 5%;
+            width: 80%;
+            padding: 2% 1% 9% 2%;
+            border: 1px white solid;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #0e0e0e;
+            padding: 10px;
+            margin: 15% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888888;
+            width: 40%; /* Could be more or less, depending on screen size */
+            height :35%;
+        }
+
+    </style>
+</head>
+<body>
+<heading>
+    <h2>Orders</h2><br>
+</heading>
+    <div class="modal" id='id1'>
+        <button class="button" formaction="/de" onclick="document.getElementById('id1').style.display='none'" style="vertical-align:middle"><span>Completed</span></button>
+        <div class="txt"><b><u><a>Order 1</a></u></b><br><b>Client ID:</b> 2<br><b>Product ID:</b> 5<br><b>Price:</b> 70<br><b>Date:</b> 10/01/2022</div>
+    </div>
+
+    <div class="modal" id='id2'>
+        <button class="button" onclick="document.getElementById('id2').style.display='none'" style="vertical-align:middle"><span>Completed</span></button>
+        <div class="txt"><b><u><a>Order 2</a></u></b><br><b>Client ID:</b> 3<br><b>Product ID:</b> 7<br><b>Price:</b> 50<br><b>Date:</b> 7/01/2022</div>
+    </div>
+    <div class="modal" id='id3'>
+        <button class="button" onclick="document.getElementById('id3').style.display='none'" style="vertical-align:middle"><span>Completed</span></button>
+        <div class="txt"><b><u><a>Order 3</a></u></b><br><b>Client ID:</b> 1<br><b>Product ID:</b> 1<br><b>Price:</b> 130<br><b>Date:</b> 01/12/2021</div>
+    </div>
+    <div class="modal" id='id4'>
+        <button class="button" onclick="document.getElementById('id4').style.display='none'" style="vertical-align:middle"><span>Completed</span></button>
+        <div class="txt"><b><u><a>Order 4</a></u></b><br><b>Client ID:</b> 5<br><b>Product ID:</b> 5<br><b>Price:</b> 100<br><b>Date:</b> 21/12/2021</div>
+    </div>
+    <div class="modal" id='id5'>
+        <button class="button" onclick="document.getElementById('id5').style.display='none'" style="vertical-align:middle"><span>Completed</span></button>
+        <div class="txt"><b><u><a>Order 5</a></u></b><br><b>Client ID:</b> 6<br><b>Product ID:</b> 1<br><b>Price:</b> 80<br><b>Date:</b> 12/01/2022</div>
+    </div>
+</body>
+</html>

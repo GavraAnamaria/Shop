@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<style>
+    .container {
+        position: relative;
+        width: 23%;
+        padding: 0;
+        margin: 1%;
+        float: top;
+        float: left;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 4%;
+        transition: .5s ease;
+        background-color: black;
+    }
+
+    .container:hover .overlay {
+        opacity: 80%;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    button{
+        color: white;
+        background-color: #772edd;
+        padding:6px 20px;
+        margin:10px
+    }
+</style>
+</head>
+<body>
+<div>
+<div class="container">
+    <img src="img/tricou.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>T-shirt</b> <br> <b>Price:</b> 60 <br><button formaction="/addToCart">Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/bluza2.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Shirt</b> <br> <b>Price:</b> 80 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/geaca.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Jacket</b> <br> <b>Price:</b> 120 <br><button>Add to cart</button></div>
+    </div>
+</div></div>
+
+
+
+<div>
+<div class="container">
+    <img src="img/hanoracNegru.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Black sweatshirt</b> <br> <b>Price:</b> 70 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/hanorac.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Sweatshirt</b> <br> <b>Price:</b> 90 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/geacaAlba.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>White jacket</b> <br> <b>Price:</b> 150 <br><button>Add to cart</button></div>
+    </div>
+</div></div>
+
+<div class="container">
+    <img src="img/geaca2.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Jacket</b> <br> <b>Price:</b> 180 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/pulover1.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Sweater</b> <br> <b>Price:</b> 180 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/geacaneagra.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Black jacket</b> <br> <b>Price:</b> 140 <br><button>Add to cart</button></div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="img/pulover.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Sweater</b> <br> <b>Price:</b> 70 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/bluza.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Shirt</b> <br> <b>Price:</b> 70 <br><button>Add to cart</button></div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/camasa.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text"><b>Shirt</b> <br> <b>Price:</b> 70 <br><button>Add to cart</button></div>
+    </div>
+</div>
+</body>
+</html>
